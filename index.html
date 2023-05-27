@@ -88,9 +88,9 @@
             background: #fff;
             border-radius: 6px;
             position: absolute;
-            top: 0;
+            top: 50%;
             left:50%;
-            transform: translate(-50%, -50%) scale(0.1)  ;
+            transform: translate(-50%, -50%) scale(1)  ;
             text-align: center;
             padding: 0 30px 30px;
             color: #333;
@@ -198,20 +198,20 @@
             <p>Payment Successful!</p>
             <button type="button" onclick="closePopup()">OK</button>
         </div>
-        <script>
-            let popup = document.getElementById("popup");
-            function openPopup(){
-                popup.classList.add("open-popup");
-        
-            }
-            function closePopup(){
-                popup.classList.remove("open-popup");
-        
-            }
-        </script>
-      
     </form>
     
 </div>
 </body>
+<script>
+    let popup = document.querySelector(".popup");
+    function openPopup(){
+        popup.style.visibility = "visible";
+
+    }
+    function closePopup(){
+        popup.style.visibility = "hidden";
+
+    }
+</script>
+
 </html>
